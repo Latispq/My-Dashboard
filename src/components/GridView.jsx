@@ -16,6 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function RowAndColumnSpacing() {
   return (
     <Box sx={{ width: '100%' }}>
+    <p style={{float: "left", fontSize: "20px", fontWeight: "bold", color: "maroon"}}>Welcome to your Dashboard</p>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={4}>
           <Item><OutlinedCard /></Item>
