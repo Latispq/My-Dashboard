@@ -3,7 +3,11 @@ import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import OutlinedCard from './DataCard';
+import SalesObtainedCard from './SalesObtainedCard';
+import BarChartOverview from './BarChartOverview';
+import NewClientsCard from './NewClientsCard';
+import TrafficReceivedCard from './TrafficReceivedCard';
+import RecentTransactionsCard from './RecentTransactionsCard';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -19,19 +23,19 @@ export default function RowAndColumnSpacing() {
     <p style={{float: "left", fontSize: "20px", fontWeight: "bold", color: "maroon"}}>Welcome to your Dashboard</p>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={4}>
-          <Item><OutlinedCard /></Item>
+          <Item><SalesObtainedCard /></Item>
         </Grid>
         <Grid item xs={4}>
-          <Item><OutlinedCard /></Item>
+          <Item><NewClientsCard /></Item>
         </Grid>
         <Grid item xs={4}>
-          <Item><OutlinedCard /></Item>
+          <Item><TrafficReceivedCard /></Item>
         </Grid>
         <Grid item xs={8}>
-          <Item><OutlinedCard /></Item>
+          <Item><BarChartOverview /></Item>
         </Grid>
         <Grid item xs={4}>
-          <Item><OutlinedCard /></Item>
+          <Item><RecentTransactionsCard /></Item>
         </Grid>
       </Grid>
     </Box>
