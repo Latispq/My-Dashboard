@@ -3,11 +3,9 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import GroupIcon from '@mui/icons-material/Group';
 import { Divider } from '@mui/material';
-import { green, purple } from '@mui/material/colors';
+import Transactions from './Transactions';
 import { left, right } from '@popperjs/core';
-
 
 const bull = (
   <Box
@@ -18,6 +16,8 @@ const bull = (
   </Box>
 );
 
+
+
 const card = (
   <React.Fragment>
     <CardContent>
@@ -26,18 +26,19 @@ const card = (
       </Typography>
       <Divider />
       <Typography variant="h5" component="div">
-        <span style={{color: purple, fontSize: "14px", fontWeight: "bold", float: left, color: "purple"}}>9fh372</span>
-        <span style={{fontSize: "12px", float: right, fontWeight: "bold", color: "green"}}>$218</span><br/>
-        <span style={{fontSize: "12px", float: left}}>John Doe</span>
-        <span style={{fontSize: "12px", float: right}}>2023-02-04</span>
+        <span style={{color: "purple", fontSize: "14px", fontWeight: "bold", float: left}}>82js83</span>
+        <span style={{fontSize: "12px", float: right, fontWeight: "bold", color: "green"}}>$726</span><br/>
+        <span style={{fontSize: "12px", float: left}}>John Lamin</span>
+        <span style={{fontSize: "12px", float: right}}>03-08-2023</span>
       </Typography><br/><br/>
       <Divider />
       <Typography variant="h5" component="div">
-        <span style={{color: purple, fontSize: "14px", fontWeight: "bold", float: left, color: "purple"}}>289k3b</span>
-        <span style={{fontSize: "12px", float: right, fontWeight: "bold", color: "green"}}>$2,018</span><br/>
-        <span style={{fontSize: "12px", float: left}}>Mary Lamboi</span>
-        <span style={{fontSize: "12px", float: right}}>2024-01-10</span>
-      </Typography>
+        <span style={{color: "purple", fontSize: "14px", fontWeight: "bold", float: left}}>738B2L</span>
+        <span style={{fontSize: "12px", float: right, fontWeight: "bold", color: "green"}}>$7.46</span><br/>
+        <span style={{fontSize: "12px", float: left}}>Aminata Kawa</span>
+        <span style={{fontSize: "12px", float: right}}>04-02-2024</span>
+      </Typography><br/><br/>
+      <Divider />
     </CardContent>
   </React.Fragment>
 );
