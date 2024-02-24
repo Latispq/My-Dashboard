@@ -29,8 +29,7 @@ const card = (
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         <span style={{color: "maroon", fontWeight: "bold"}}>Recent Transactions</span>
       </Typography>
-      <Divider />
-    
+      <Divider /> 
     </CardContent>
   </React.Fragment>
 );
