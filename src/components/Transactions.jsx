@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 export default function Transactions({txId, user, date, cost}) {
   return (
     <>
+    <div style={{height: "100px"}}>
     <Typography variant="h5" component="div">
         <span style={{color: "purple", fontSize: "14px", fontWeight: "bold", float: left}}>{txId}</span>
         <span style={{fontSize: "12px", float: right, fontWeight: "bold", color: "green"}}>${cost}</span><br/>
@@ -13,6 +14,7 @@ export default function Transactions({txId, user, date, cost}) {
         <span style={{fontSize: "12px", float: right}}>{date}</span>
       </Typography><br/><br/>
       <Divider />
+      </div>
       </>
   )
 }

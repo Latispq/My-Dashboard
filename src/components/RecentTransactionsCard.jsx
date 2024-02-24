@@ -40,7 +40,9 @@ export default function RecentTransactionsCard() {
     
     <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card}</Card>
+      <div style={{height: 300, overflowY: "scroll"}}>
       <span>{recentTransactions}</span>
+      </div>
     </Box>
   );
 }
