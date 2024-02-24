@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Divider } from '@mui/material';
 import Transactions from './Transactions';
-import { left, right } from '@popperjs/core';
+import { mockTransactions } from '../data/mockData';
 
 const bull = (
   <Box
@@ -16,37 +16,31 @@ const bull = (
   </Box>
 );
 
-
+const recentTransactions = mockTransactions.map(item => {
+    
+        return (
+            <Transactions txId={item.txId} user={item.user} date={item.date} cost={item.cost} />
+        )
+    })
 
 const card = (
   <React.Fragment>
     <CardContent>
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        <p style={{color: "maroon", fontWeight: "bold"}}>Recent Transactions</p>
+        <span style={{color: "maroon", fontWeight: "bold"}}>Recent Transactions</span>
       </Typography>
       <Divider />
-      <Typography variant="h5" component="div">
-        <span style={{color: "purple", fontSize: "14px", fontWeight: "bold", float: left}}>82js83</span>
-        <span style={{fontSize: "12px", float: right, fontWeight: "bold", color: "green"}}>$726</span><br/>
-        <span style={{fontSize: "12px", float: left}}>John Lamin</span>
-        <span style={{fontSize: "12px", float: right}}>03-08-2023</span>
-      </Typography><br/><br/>
-      <Divider />
-      <Typography variant="h5" component="div">
-        <span style={{color: "purple", fontSize: "14px", fontWeight: "bold", float: left}}>738B2L</span>
-        <span style={{fontSize: "12px", float: right, fontWeight: "bold", color: "green"}}>$7.46</span><br/>
-        <span style={{fontSize: "12px", float: left}}>Aminata Kawa</span>
-        <span style={{fontSize: "12px", float: right}}>04-02-2024</span>
-      </Typography><br/><br/>
-      <Divider />
+    
     </CardContent>
   </React.Fragment>
 );
 
 export default function RecentTransactionsCard() {
   return (
+    
     <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card}</Card>
+      <span>{recentTransactions}</span>
     </Box>
   );
 }
